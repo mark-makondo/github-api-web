@@ -12,6 +12,7 @@
         @error "Invalid type #{type}."
     } 
 };
+
 @mixin setFontSize($type){
     h1{
         font-size: getFontSize($type, h1);
