@@ -23,7 +23,7 @@
             max-width: 100%;
             min-width: 10rem;
             height: 10rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             background: getColors(default);
             overflow: hidden;
             img{
@@ -45,15 +45,19 @@
             }
         }
         button{
-            background: getColors(default);
-            color: getColors(primary);
-            font-weight: bold;
+            background: getColors(active-color);
+            color: getColors(secondary);
             padding: .5rem 1rem;
             border-radius: 5rem;
             outline: none;
             border: none;
             margin-bottom: 3rem;
             letter-spacing: 1px;
+            @media(hover: hover){
+                &:hover{
+                    background: getColors(active-color-light);
+                }
+            }
         }
         .error{
             color: getColors(default);

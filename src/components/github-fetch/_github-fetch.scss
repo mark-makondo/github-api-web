@@ -20,6 +20,13 @@
                 margin-left: 1rem;
                 border-radius: 1rem;
                 letter-spacing: 1px;
+                background: getColors(active-color);
+                color: getColors(secondary);
+                @media(hover: hover){
+                    &:hover{
+                        background: getColors(active-color-light);
+                    }
+                }
             }
         }
     }

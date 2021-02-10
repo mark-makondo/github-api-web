@@ -63,6 +63,14 @@ body {
   margin-left: 1rem;
   border-radius: 1rem;
   letter-spacing: 1px;
+  background: #414141;
+  color: #D1D1D1;
+}
+
+@media (hover: hover) {
+  .github-fetch form input:nth-of-type(2):hover {
+    background: #585757;
+  }
 }
 
 .home {
@@ -123,7 +131,7 @@ body {
   max-width: 100%;
   min-width: 10rem;
   height: 10rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   background: #FFFFFF;
   overflow: hidden;
 }
@@ -148,15 +156,20 @@ body {
 }
 
 .home-content button {
-  background: #FFFFFF;
-  color: #242323;
-  font-weight: bold;
+  background: #414141;
+  color: #D1D1D1;
   padding: .5rem 1rem;
   border-radius: 5rem;
   outline: none;
   border: none;
   margin-bottom: 3rem;
   letter-spacing: 1px;
+}
+
+@media (hover: hover) {
+  .home-content button:hover {
+    background: #585757;
+  }
 }
 
 .home-content .error {
