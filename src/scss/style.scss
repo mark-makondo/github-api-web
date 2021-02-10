@@ -1,0 +1,13 @@
+// initializations
+@import 'variables';
+@import 'functions';
+@import 'init';
+
+// components
+@import '../components/github-fetch/github-fetch';
+
+// pages
+@import '../pages/Home/home'; 
+
+// responsive
+@import 'global-responsive';

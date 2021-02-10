@@ -1,0 +1,16 @@
+// responsive medium screen //768px
+@include media-md{
+    .home{
+        max-width: getMaxWidth(m);
+    }
+}
+
+// responsive large screen //1200px
+@include media-lg{
+
+}
+
+// responsive large screen //1900px
+@include media-xl{
+
+}

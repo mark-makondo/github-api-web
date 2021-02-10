@@ -1,0 +1,32 @@
+// font size variables
+$font-size-s: (
+    "normal-1" : 1rem,  //16px
+    "normal-2" : 0.75rem //12px 
+);
+$font-size-m: (
+    "normal-1" : 1.25rem, //20px
+    "normal-2" : 1rem //16px
+);
+$font-size-l: (
+    "normal-1" :  1.5rem, //24px
+    "normal-2" : 1.25rem //20px
+);
+$font-size-xl: (
+    "normal-1" : 1.75rem, //28px
+    "normal-2" : 1.5rem //24px
+);
+
+// max width variables
+$max-width: (
+    "s": 20rem,
+    "m": 40rem,
+    "l": 50rem,
+    "xl": 95rem,
+);
+
+// colors
+$colors: (
+    "primary":#242323,
+    "secondary":#D1D1D1,
+    "default": #FFFFFF
+);
