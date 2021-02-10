@@ -26,11 +26,31 @@ const HomeContainer = () => {
     
     const showClickHandler = (e) => {
         e.preventDefault();
-        
-        let query = document.querySelector('.home-content__repos');
-        query.classList.toggle('active');
-    }
 
+        if(objectIsEmpty(user)){
+            alert("Search first!");
+        }else{
+            let button = document.querySelector('.home-content button');
+            let query = document.querySelector('.home-content__repos');
+            query.classList.toggle('active');
+
+            if(query.classList.contains('active')){
+                button.innerHTML = "Hide Repositories";
+            }else{
+                button.innerHTML = "Repositories";
+            }
+        }
+    } //show repo button click handler event
+
+    const objectIsEmpty = (object) => {
+        for (let key in object){
+            if(object.hasOwnProperty(key)){
+                return false;
+            }
+        }
+        return true;
+    } // custom function for determining empty object
+    
     return(
         <HomeUI
             user = {user}

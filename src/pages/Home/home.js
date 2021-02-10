@@ -21,7 +21,7 @@ const Home = ({ user, setUserData, repos, setRepos, error, setError, fetchRepoRe
                     <img src={user.avatar_url} alt=""/>
                     <span className="normal-2">{user.name}</span>
                 </div>
-                <button className="normal-2" onClick={(e) =>showClickHandler(e)}>Show Repositories</button>
+                <button className="normal-2" onClick={(e) =>showClickHandler(e)}>Repositories</button>
                 { error ? (<span className="normal-1 error">{error}</span>) 
                 : (<div className="home-content__repos">
                     {repos ? repos.map( (item, i) => (

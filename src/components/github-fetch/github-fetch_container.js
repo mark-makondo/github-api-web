@@ -22,8 +22,9 @@ const GithubFetchContainer = ({ user, setUserData, setRepos, error, setError }) 
             setUserData(userResponse.data);
             setError('');
         }catch (err) {
-            if(err.response.status === 404){
-                setError('User Does Not Exist!');
+            if(err.response){
+                setError(err.response.data.message);
+                setUserData({});
             }
         }
     } // fetch user list based on search input username
