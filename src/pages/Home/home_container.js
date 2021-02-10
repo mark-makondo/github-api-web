@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Axios from "axios";
 
 // components ui
@@ -22,7 +22,7 @@ const HomeContainer = () => {
 
         childP.innerHTML = `Read Me: ${base64ToString}`;
         
-    } //set repo readme callback to use it on home container ui
+    } // fetch repositories readme file data on repo click 
     
     const showClickHandler = (e) => {
         e.preventDefault();

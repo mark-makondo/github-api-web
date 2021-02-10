@@ -38,12 +38,12 @@ const GithubFetchContainer = ({ user, setUserData, setRepos, error, setError }) 
     const clickHandler = (e) => {
         e.preventDefault();
         fetchUser();
-    }
+    } // fetch user when search button is clicked
 
     const getInput = (e) => {
         e.preventDefault();
         setUsername(e.target.value);
-    }
+    } // get input value on input change event
 
     useEffect(() => {
         // check the current github api rate limit

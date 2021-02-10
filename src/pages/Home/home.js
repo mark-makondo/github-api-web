@@ -3,7 +3,7 @@ import React from 'react';
 // compoenents
 import GithubFetch from '../../components/github-fetch/github-fetch_container.js';
 
-const Home = ({ user, setUserData, repos, setRepos, error, setError, fetchRepoReadme, showClickHandler}) => {
+const Home = ({ user, setUserData, repos, setRepos, error, setError, fetchRepoReadme, showClickHandler }) => {
    
     return(
         <div className="home">
