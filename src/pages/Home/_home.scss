@@ -21,22 +21,21 @@
             position: relative;
             border: 1px solid;
             max-width: 100%;
-            min-width: 15rem;
-            height: 15rem;
+            min-width: 10rem;
+            height: 10rem;
             margin-bottom: 1rem;
             background: getColors(default);
             overflow: hidden;
             img{
                 max-width: 100%;
                 height: 100%;
-                transition: 300ms all linear;
             }
             span{
                 position: absolute;
                 text-transform: capitalize;
                 z-index: 2;
-                background: getColors(secondary);
-                color: getColors(primary);
+                background: getColors(active-color);
+                color: getColors(secondary);
                 font-weight: bold;
                 left: 0;
                 right: 0;
@@ -67,10 +66,10 @@
                 width: 100%;
             }
             &-holder{
-                border: 1px solid white;
                 background: getColors(default);
                 width: 100%;
                 margin-bottom: 1.5rem;
+                border-radius: 1rem 1rem;
                 span{
                     display: block;
                     background: getColors(secondary);
@@ -81,6 +80,10 @@
                     font-weight: bold;
                     letter-spacing: 2px;
                     text-align: left;
+                    &.active{
+                        background: getColors(active-color);
+                        color: getColors(secondary);
+                    }
                 }
                 p{
                     display: none;
@@ -88,6 +91,9 @@
                     text-align: left;
                     &.active{
                         display: block;
+                        span{
+                            background: getColors(active-color);
+                        }
                     }
                 }
             }

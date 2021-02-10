@@ -18,8 +18,11 @@ const HomeContainer = () => {
         let base64ToString = buff.toString('ascii');
         
         let childP = e.target.parentNode.querySelector('p');
+        let childSpan = e.target.parentNode.querySelector('span');
         childP.innerHTML = `Read Me: ${base64ToString}`;
         childP.classList.toggle('active');
+
+        childSpan.classList.toggle('active');
         
     } //set repo readme callback to use it on home container ui
     

@@ -29,10 +29,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -53,7 +53,6 @@ body {
 }
 
 .github-fetch form input:nth-of-type(1) {
-  margin-bottom: .5rem;
   width: 100%;
   border-radius: .7rem;
   font-style: italic;
@@ -61,7 +60,7 @@ body {
 }
 
 .github-fetch form input:nth-of-type(2) {
-  margin-left: auto;
+  margin-left: 1rem;
   border-radius: 1rem;
   letter-spacing: 1px;
 }
@@ -122,8 +121,8 @@ body {
   position: relative;
   border: 1px solid;
   max-width: 100%;
-  min-width: 15rem;
-  height: 15rem;
+  min-width: 10rem;
+  height: 10rem;
   margin-bottom: 1rem;
   background: #FFFFFF;
   overflow: hidden;
@@ -132,16 +131,14 @@ body {
 .home-content__profile img {
   max-width: 100%;
   height: 100%;
-  -webkit-transition: 300ms all linear;
-  transition: 300ms all linear;
 }
 
 .home-content__profile span {
   position: absolute;
   text-transform: capitalize;
   z-index: 2;
-  background: #D1D1D1;
-  color: #242323;
+  background: #414141;
+  color: #D1D1D1;
   font-weight: bold;
   left: 0;
   right: 0;
@@ -191,10 +188,10 @@ body {
 }
 
 .home-content__repos-holder {
-  border: 1px solid white;
   background: #FFFFFF;
   width: 100%;
   margin-bottom: 1.5rem;
+  border-radius: 1rem 1rem;
 }
 
 .home-content__repos-holder span {
@@ -209,6 +206,11 @@ body {
   text-align: left;
 }
 
+.home-content__repos-holder span.active {
+  background: #414141;
+  color: #D1D1D1;
+}
+
 .home-content__repos-holder p {
   display: none;
   padding: .5rem;
@@ -219,9 +221,36 @@ body {
   display: block;
 }
 
+.home-content__repos-holder p.active span {
+  background: #414141;
+}
+
 @media screen and (min-width: 768px) {
   .home {
     max-width: 40rem;
+  }
+  .home-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin-top: 3rem;
+    width: 100%;
+  }
+  .home-content__profile {
+    min-width: 15rem;
+    height: 15rem;
   }
 }
 

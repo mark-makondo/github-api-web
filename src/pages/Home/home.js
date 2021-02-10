@@ -24,13 +24,13 @@ const Home = ({ user, setUserData, repos, setRepos, error, setError, fetchRepoRe
                 <button className="normal-2" onClick={(e) =>showClickHandler(e)}>Show Repositories</button>
                 { error ? (<span className="normal-1 error">{error}</span>) 
                 : (<div className="home-content__repos">
-                        {repos ? repos.map( (item, i) => (
-                            <div key={item.id} onClick={(e)=> fetchRepoReadme(e,item.owner.login, item.name)} className={`home-content__repos-holder repo-${i}`}>
-                                <span className="normal-1">{item.name}</span>
-                                <p className={`normal-2 p-${i}`}></p>
-                            </div>
-                        )): (<span className="normal-1"> Loading . . .</span>)}
-                    </div>)}
+                    {repos ? repos.map( (item, i) => (
+                        <div key={item.id} onClick={(e)=> fetchRepoReadme(e,item.owner.login, item.name)} className={`home-content__repos-holder repo-${i}`}>
+                            <span className="normal-1">{item.name}</span>
+                            <p className={`normal-2 p-${i}`}></p>
+                        </div>)) 
+                : (<span className="normal-1"> Loading . . .</span>)}</div>
+                )}
             </div>
         </div>
     )
