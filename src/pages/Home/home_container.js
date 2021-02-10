@@ -10,6 +10,7 @@ const HomeContainer = () => {
     const [error, setError]= useState('');
 
     const fetchRepoReadme = async (e,targetOwner, targetRepName) => {
+        e.currentTarget.classList.toggle('active');
 
         let readmeResponse = await Axios.get(`https://api.github.com/repos/${targetOwner}/${targetRepName}/contents/README.md`);
         let readmeData = readmeResponse.data;
@@ -17,12 +18,9 @@ const HomeContainer = () => {
         let buff = new Buffer.from(str, 'base64')
         let base64ToString = buff.toString('ascii');
         
-        let childP = e.target.parentNode.querySelector('p');
-        let childSpan = e.target.parentNode.querySelector('span');
-        childP.innerHTML = `Read Me: ${base64ToString}`;
-        childP.classList.toggle('active');
+        let childP = e.target.parentNode.querySelector('.repo-info p');
 
-        childSpan.classList.toggle('active');
+        childP.innerHTML = `Read Me: ${base64ToString}`;
         
     } //set repo readme callback to use it on home container ui
     
@@ -31,7 +29,6 @@ const HomeContainer = () => {
         
         let query = document.querySelector('.home-content__repos');
         query.classList.toggle('active');
-        console.log(query)
     }
 
     return(

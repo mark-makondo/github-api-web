@@ -70,6 +70,18 @@
                 width: 100%;
                 margin-bottom: 1.5rem;
                 border-radius: 1rem 1rem;
+                &.active{
+                    span{
+                        background: getColors(active-color);
+                        color: getColors(secondary);
+                    }
+                    .repo-info{
+                        display: block;
+                        span{
+                            background: getColors(active-color);
+                        }
+                    }
+                }
                 span{
                     display: block;
                     background: getColors(secondary);
@@ -80,22 +92,21 @@
                     font-weight: bold;
                     letter-spacing: 2px;
                     text-align: left;
-                    &.active{
-                        background: getColors(active-color);
-                        color: getColors(secondary);
-                    }
                 }
-                p{
+                .repo-info{
                     display: none;
+                    width: 100%;
                     padding: .5rem;
                     text-align: left;
-                    &.active{
-                        display: block;
-                        span{
-                            background: getColors(active-color);
-                        }
+                    a{
+                        text-decoration: underline;;
                     }
+                    p{
+                        padding-top: .5rem;
+                    }
+                   
                 }
+                
             }
         }
     }

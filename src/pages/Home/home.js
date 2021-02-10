@@ -27,7 +27,11 @@ const Home = ({ user, setUserData, repos, setRepos, error, setError, fetchRepoRe
                     {repos ? repos.map( (item, i) => (
                         <div key={item.id} onClick={(e)=> fetchRepoReadme(e,item.owner.login, item.name)} className={`home-content__repos-holder repo-${i}`}>
                             <span className="normal-1">{item.name}</span>
-                            <p className={`normal-2 p-${i}`}></p>
+                            <div className="repo-info">
+                                <a href={item.html_url} className="normal-2">Repo Link</a>
+                                <p className={`normal-2 p-${i}`}></p>
+                            </div>
+                            
                         </div>)) 
                 : (<span className="normal-1"> Loading . . .</span>)}</div>
                 )}
