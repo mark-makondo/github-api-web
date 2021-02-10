@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Axios from "axios";
 
 // components ui
 import HomeUI from './home.js';
+
+// animation
+import Animation from './home_animation.js';
 
 const HomeContainer = () => {
     const [user, setUserData] = useState({});
@@ -26,6 +29,7 @@ const HomeContainer = () => {
     
     const showClickHandler = (e) => {
         e.preventDefault();
+        let active = false;
 
         if(objectIsEmpty(user)){
             alert("Search first!");
@@ -36,9 +40,12 @@ const HomeContainer = () => {
 
             if(query.classList.contains('active')){
                 button.innerHTML = "Hide Repositories";
+                active = true;
             }else{
                 button.innerHTML = "Repositories";
+                active = false;
             }
+            Animation(e, active);
         }
     } //show repo button click handler event
 
@@ -51,6 +58,10 @@ const HomeContainer = () => {
         return true;
     } // custom function for determining empty object
     
+    useEffect(() => {
+
+    }, [])
+
     return(
         <HomeUI
             user = {user}

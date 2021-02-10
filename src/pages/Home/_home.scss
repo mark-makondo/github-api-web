@@ -27,6 +27,7 @@
             background: getColors(default);
             overflow: hidden;
             img{
+                mix-blend-mode: luminosity;
                 max-width: 100%;
                 height: 100%;
             }
@@ -74,6 +75,7 @@
                 width: 100%;
                 margin-bottom: 1.5rem;
                 border-radius: 1rem 1rem;
+                cursor: pointer;
                 &.active{
                     span{
                         background: getColors(active-color);
@@ -81,6 +83,7 @@
                     }
                     .repo-info{
                         display: block;
+                        opacity: 1;
                         span{
                             background: getColors(active-color);
                         }
@@ -96,12 +99,15 @@
                     font-weight: bold;
                     letter-spacing: 2px;
                     text-align: left;
+                    transition: 200ms all linear;
                 }
                 .repo-info{
                     display: none;
+                    opacity: 0;
                     width: 100%;
                     padding: .5rem;
                     text-align: left;
+                    transition: 200ms all linear;
                     a{
                         text-decoration: underline;;
                     }

@@ -137,6 +137,7 @@ body {
 }
 
 .home-content__profile img {
+  mix-blend-mode: luminosity;
   max-width: 100%;
   height: 100%;
 }
@@ -205,6 +206,7 @@ body {
   width: 100%;
   margin-bottom: 1.5rem;
   border-radius: 1rem 1rem;
+  cursor: pointer;
 }
 
 .home-content__repos-holder.active span {
@@ -214,6 +216,7 @@ body {
 
 .home-content__repos-holder.active .repo-info {
   display: block;
+  opacity: 1;
 }
 
 .home-content__repos-holder.active .repo-info span {
@@ -230,13 +233,18 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
   text-align: left;
+  -webkit-transition: 200ms all linear;
+  transition: 200ms all linear;
 }
 
 .home-content__repos-holder .repo-info {
   display: none;
+  opacity: 0;
   width: 100%;
   padding: .5rem;
   text-align: left;
+  -webkit-transition: 200ms all linear;
+  transition: 200ms all linear;
 }
 
 .home-content__repos-holder .repo-info a {
